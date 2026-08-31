@@ -1,0 +1,1 @@
+package za.ac.cput.factory; import org.junit.jupiter.api.Test; import za.ac.cput.domain.Review; import static org.junit.jupiter.api.Assertions.*; class ReviewFactoryTest{@Test void create(){Review x=ReviewFactory.createReview("C1","Good","Excellent",5);assertNotNull(x.getReviewId());}}

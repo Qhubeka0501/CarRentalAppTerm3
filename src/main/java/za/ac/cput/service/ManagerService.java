@@ -1,0 +1,1 @@
+package za.ac.cput.service; import za.ac.cput.domain.Manager; public interface ManagerService extends IService<Manager,String>{ java.util.List<Manager> findAll(); }

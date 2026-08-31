@@ -1,0 +1,1 @@
+package za.ac.cput.factory; import org.junit.jupiter.api.Test; import za.ac.cput.domain.Payment; import java.time.LocalDate; import static org.junit.jupiter.api.Assertions.*; class PaymentFactoryTest{@Test void create(){Payment x=PaymentFactory.createPayment("PAY001","B1",100,LocalDate.now(),"Card","Paid");assertEquals("PAY001",x.getPaymentId());}}

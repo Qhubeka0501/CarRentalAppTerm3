@@ -1,0 +1,1 @@
+package za.ac.cput.service; import za.ac.cput.domain.Employee; public interface EmployeeService extends IService<Employee,String>{ java.util.List<Employee> findAll(); }

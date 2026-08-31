@@ -1,0 +1,1 @@
+package za.ac.cput.service; import za.ac.cput.domain.Notification; public interface NotificationService extends IService<Notification,String>{ java.util.List<Notification> findAll(); }

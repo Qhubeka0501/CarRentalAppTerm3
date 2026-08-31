@@ -1,0 +1,16 @@
+@startuml
+skinparam classAttributeIconSize 0
+class User { userId; firstName; lastName; email; phoneNumber }
+class Customer { driverLicenseNumber; dateOfBirth }
+class Employee { salary; password }
+class Manager { managerCode }
+class Role { roleId; name }\nclass Bookings { bookingId; customerId; vehicleId; rentalDate; returnDate; paymentStatus; bookingStatus }\nclass Vehicle { vehicleId; licensePlate; make; model; status }
+class Login { loginId; email; loginTime }
+class Register { registerId; email; registeredAt }
+User <|-- Customer
+User <|-- Employee
+Employee <|-- Manager
+User "*" --> "1" Role : role
+Customer *-- HomeAddress : address
+Customer *-- NextOfKin : nextOfKin\nCustomer --> Bookings : customerId\nBookings --> Vehicle : vehicleId
+@enduml

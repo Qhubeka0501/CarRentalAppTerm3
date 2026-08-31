@@ -1,0 +1,1 @@
+package za.ac.cput.service; import za.ac.cput.domain.Register; public interface RegisterService extends IService<Register,String>{ java.util.List<Register> findAll(); }
