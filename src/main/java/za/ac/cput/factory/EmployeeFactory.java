@@ -1,1 +1,29 @@
-package za.ac.cput.factory; import util.Helper; import za.ac.cput.domain.Employee; import za.ac.cput.domain.Role; public class EmployeeFactory{public static Employee createEmployee(String firstName,String lastName,String email,String phone,double salary,String password,Role role){if(Helper.isStringNull(firstName)||!Helper.isEmailValid(email)||Helper.isStringNull(password)||!Helper.isNonNegative(salary))return null;return new Employee.Builder<>().setFirstName(firstName).setLastName(lastName).setEmail(email).setPhoneNumber(phone).setSalary(salary).setPassword(password).setRole(role).build();}}
+package za.ac.cput.factory;
+import util.Helper;
+import za.ac.cput.domain.Employee;
+import za.ac.cput.domain.Role;
+
+/*
+ * Class Name: EmployeeFactory
+ * Description: EmployeeFactory CarRentalApp class
+ * Author: Avuyile Twesha (240763394)
+ */
+
+
+public class EmployeeFactory{
+    public static Employee createEmployee(String firstName,String lastName,String email,String phone,double salary,String password,Role role){
+        if(Helper.isStringNull(firstName)
+                ||!Helper.isEmailValid(email)
+                ||Helper.isStringNull(password)
+                ||!Helper.isNonNegative(salary))
+            return null;
+        return new Employee.Builder<>().setFirstName(firstName)
+                .setLastName(lastName)
+                .setEmail(email)
+                .setPhoneNumber(phone)
+                .setSalary(salary)
+                .setPassword(password)
+                .setRole(role)
+                .build();
+    }
+}

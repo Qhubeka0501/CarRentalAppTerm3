@@ -1,1 +1,28 @@
-package za.ac.cput.service; import org.springframework.stereotype.Service; import za.ac.cput.domain.Manager; import za.ac.cput.repository.ManagerRepository; @Service public class ManagerServiceImpl implements ManagerService{private final ManagerRepository repository; public ManagerServiceImpl(ManagerRepository repository){this.repository=repository;} public Manager create(Manager x){return repository.save(x);} public Manager read(String id){return repository.findById(id).orElse(null);} public Manager update(Manager x){return repository.save(x);} public boolean delete(String id){if(repository.existsById(id)){repository.deleteById(id);return true;}return false;} public java.util.List<Manager> findAll(){return repository.findAll();} }
+package za.ac.cput.service;
+import org.springframework.stereotype.Service;
+import za.ac.cput.domain.Manager;
+import za.ac.cput.repository.ManagerRepository;
+
+/*
+ * Class Name: ManagerServiceImpl
+ * Description: Implementation of ManagerService interface
+ * Author: Avuyile Twesha (240763394)
+ */
+
+
+
+@Service
+public class ManagerServiceImpl implements ManagerService{private final ManagerRepository repository; public ManagerServiceImpl(ManagerRepository repository){this.repository=repository;}
+    public Manager create(Manager x){
+    return repository.save(x);
+}
+public Manager read(String id){return repository.findById(id).orElse(null);} public Manager update(Manager x){return repository.save(x);
+}
+public boolean delete(String id){if(repository.existsById(id)){repository.deleteById(id);
+    return true;}
+    return false;}
+
+    public java.util.List<Manager> findAll(){
+    return repository.findAll();
+}
+}
