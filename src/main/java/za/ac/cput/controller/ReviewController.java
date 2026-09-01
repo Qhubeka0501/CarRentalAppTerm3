@@ -7,6 +7,13 @@ import za.ac.cput.service.ReviewService;
 
 import java.util.List;
 
+/*
+ * Class Name: ReviewServiceImpl
+ * Description: ReviewService implementation for CarRentSystem
+ * Author: Alphonsine Ningabiye (230426581)
+ * Date: 12 July 2026
+ */
+
 @RestController
 @RequestMapping("/review")
 public class ReviewController {

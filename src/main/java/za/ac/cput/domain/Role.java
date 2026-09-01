@@ -25,10 +25,12 @@ public class Role {
     }
 
     public String getRoleId() {
+
         return roleId;
     }
 
     public String getName() {
+
         return name;
     }
 
@@ -53,6 +55,7 @@ public class Role {
         }
 
         public Role build() {
+
             return new Role(this);
         }
     }
