@@ -9,7 +9,7 @@ import java.util.List;
 /*
  * Class Name: ReviewServiceImpl
  * Description: ReviewService implementation for CarRentSystem
- * Author: Lucky July Twala (231242840)
+ * Author: Alphonsine Ningabiye (230426581)
  * Date: 12 July 2026
  */
 @Service

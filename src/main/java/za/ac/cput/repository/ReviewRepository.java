@@ -5,9 +5,9 @@ import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.Review;
 
 /*
- * Class Name: ReviewRepository
- * Description: Review Repository for CarRentSystem
- * Author: Lucky July Twala (231242840)
+ * Class Name: ReviewServiceImpl
+ * Description: ReviewService implementation for CarRentSystem
+ * Author: Alphonsine Ningabiye (230426581)
  * Date: 12 July 2026
  */
 

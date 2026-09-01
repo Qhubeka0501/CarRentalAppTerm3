@@ -5,6 +5,12 @@ import za.ac.cput.domain.MaintenanceRecord;
 import za.ac.cput.repository.MaintenanceRecordRepository;
 
 import java.util.List;
+/*
+ * Class Name: ReviewServiceImpl
+ * Description: ReviewService implementation for CarRentSystem
+ * Author: Alphonsine Ningabiye (230426581)
+ * Date: 12 July 2026
+ */
 
 @Service
 public class MaintenanceRecordServiceImpl implements MaintenanceRecordService {
@@ -17,6 +23,7 @@ public class MaintenanceRecordServiceImpl implements MaintenanceRecordService {
 
     @Override
     public MaintenanceRecord create(MaintenanceRecord maintenanceRecord) {
+
         return repository.save(maintenanceRecord);
     }
 

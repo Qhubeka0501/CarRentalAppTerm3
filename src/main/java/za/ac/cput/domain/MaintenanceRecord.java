@@ -1,2 +1,95 @@
-package za.ac.cput.domain; import jakarta.persistence.*; import java.time.LocalDate;
-@Entity public class MaintenanceRecord{@Id private String recordId; private String vehicleId; private LocalDate date; private String description; private double cost; private String technicianName; protected MaintenanceRecord(){} private MaintenanceRecord(Builder b){recordId=b.recordId;vehicleId=b.vehicleId;date=b.date;description=b.description;cost=b.cost;technicianName=b.technicianName;} public String getRecordId(){return recordId;} public String getMaintenanceId(){return recordId;} public String getVehicleId(){return vehicleId;} public LocalDate getDate(){return date;} public String getDescription(){return description;} public double getCost(){return cost;} public String getTechnicianName(){return technicianName;} public static class Builder{private String recordId,vehicleId,description,technicianName;private LocalDate date;private double cost; public Builder setRecordId(String v){recordId=v;return this;} public Builder setVehicleId(String v){vehicleId=v;return this;} public Builder setDate(LocalDate v){date=v;return this;} public Builder setDescription(String v){description=v;return this;} public Builder setType(String v){description=v;return this;} public Builder setCost(double v){cost=v;return this;} public Builder setTechnicianName(String v){technicianName=v;return this;} public Builder copy(MaintenanceRecord m){recordId=m.recordId;vehicleId=m.vehicleId;date=m.date;description=m.description;cost=m.cost;technicianName=m.technicianName;return this;} public MaintenanceRecord build(){return new MaintenanceRecord(this);}}}
+package za.ac.cput.domain;
+import jakarta.persistence.*;
+import java.time.LocalDate;
+
+/*
+ * Class Name: ReviewServiceImpl
+ * Description: ReviewService implementation for CarRentSystem
+ * Author: Alphonsine Ningabiye (230426581)
+ * Date: 12 July 2026
+ */
+
+@Entity
+public class MaintenanceRecord{
+    @Id private String recordId;
+    private String vehicleId;
+    private LocalDate date;
+    private String description;
+    private double cost; private String technicianName;
+    protected MaintenanceRecord(){
+
+    }
+    private MaintenanceRecord(Builder b){
+        recordId=b.recordId;
+        vehicleId=b.vehicleId;
+        date=b.date;
+        description=b.description;
+        cost=b.cost;
+        technicianName=b.technicianName;
+    }
+    public String getRecordId(){
+        return recordId;
+    }
+    public String getMaintenanceId(){
+        return recordId;
+    }
+    public String getVehicleId(){
+        return vehicleId;
+    }
+    public LocalDate getDate(){
+        return date;
+    }
+    public String getDescription(){
+        return description;
+    }
+    public double getCost(){
+        return cost;
+    } public String getTechnicianName(){
+        return technicianName;
+    }
+    public static class Builder{
+        private String recordId,vehicleId,description,technicianName;
+        private LocalDate date;
+        private double cost;
+        public Builder setRecordId(String v){
+            recordId=v;
+            return this;
+        }
+        public Builder setVehicleId(String v){
+            vehicleId=v;
+            return this;
+        }
+        public Builder setDate(LocalDate v){
+            date=v;
+            return this;
+        }
+        public Builder setDescription(String v){
+            description=v;
+            return this;
+        }
+        public Builder setType(String v){
+            description=v;
+            return this;
+        }
+        public Builder setCost(double v){
+            cost=v;
+            return this;
+        }
+        public Builder setTechnicianName(String v){
+            technicianName=v;
+            return this;
+        }
+        public Builder copy(MaintenanceRecord m){
+            recordId=m.recordId;
+            vehicleId=m.vehicleId;
+            date=m.date;
+            description=m.description;
+            cost=m.cost;
+            technicianName=m.technicianName;
+            return this;
+        }
+        public MaintenanceRecord build(){
+            return new MaintenanceRecord(this);
+        }
+    }
+}
