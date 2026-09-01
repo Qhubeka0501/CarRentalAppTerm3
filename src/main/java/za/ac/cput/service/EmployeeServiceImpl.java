@@ -1,1 +1,36 @@
-package za.ac.cput.service; import org.springframework.stereotype.Service; import za.ac.cput.domain.Employee; import za.ac.cput.repository.EmployeeRepository; @Service public class EmployeeServiceImpl implements EmployeeService{private final EmployeeRepository repository; public EmployeeServiceImpl(EmployeeRepository repository){this.repository=repository;} public Employee create(Employee x){return repository.save(x);} public Employee read(String id){return repository.findById(id).orElse(null);} public Employee update(Employee x){return repository.save(x);} public boolean delete(String id){if(repository.existsById(id)){repository.deleteById(id);return true;}return false;} public java.util.List<Employee> findAll(){return repository.findAll();} }
+package za.ac.cput.service;
+import org.springframework.stereotype.Service;
+import za.ac.cput.domain.Employee;
+import za.ac.cput.repository.EmployeeRepository;
+
+/*
+ * Class Name: EmployeeServiceImpl
+ * Description: Service implementation for managing Employee entities
+ * Author: Avuyile Twesha (240763394)
+ */
+
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService{private final EmployeeRepository repository;
+    public EmployeeServiceImpl(EmployeeRepository repository){
+        this.repository=repository;
+    }
+    public Employee create(Employee x){
+        return repository.save(x);
+    }
+    public Employee read(String id){
+        return repository.findById(id).orElse(null);
+    }
+    public Employee update(Employee x){
+        return repository.save(x);
+    }
+
+    public boolean delete(String id){if(repository.existsById(id)){repository.deleteById(id);
+        return true;
+    }
+        return false;
+    }
+    public java.util.List<Employee> findAll(){
+        return repository.findAll();
+    }
+}
