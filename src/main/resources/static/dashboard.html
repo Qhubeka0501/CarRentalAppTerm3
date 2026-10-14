@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dashboard | CareRent
+  </title>
+  <link href="css/app.css" rel="stylesheet"/>
+ </head>
+ <body class="app-page" data-page="dashboard" data-title="Dashboard">
+  <div class="loading-line" id="globalLoading">
+  </div>
+  <aside class="app-sidebar" id="appSidebar">
+  </aside>
+  <div class="app-overlay" id="appOverlay">
+  </div>
+  <div class="app-content">
+   <header class="app-topbar" id="appTopbar">
+   </header>
+   <main class="main">
+    <div class="page-head">
+     <div>
+      <h1>
+       Dashboard
+      </h1>
+      <p>
+       Your daily car rental operations at a glance.
+      </p>
+     </div>
+     <div class="page-actions">
+      <a class="btn btn-primary" href="/bookings.html">
+       <span>
+        +
+       </span>
+       New booking
+      </a>
+     </div>
+    </div>
+    <div class="welcome-card card" style="margin-bottom:18px">
+     <h2>
+      Welcome back,
+      <span id="welcomeUser">
+       staff member
+      </span>
+      .
+     </h2>
+     <p>
+      Here is what is happening across CareRent today.
+     </p>
+    </div>
+    <section class="grid grid-4" id="statsGrid">
+     <div class="card stat-card">
+      <div>
+       <div class="stat-label">
+        Vehicles
+       </div>
+       <div class="stat-value" id="statVehicles">
+        —
+       </div>
+       <div class="stat-meta" id="metaVehicles">
+        Loading fleet
+       </div>
+      </div>
+      <div class="stat-icon">
+       🚙
+      </div>
+     </div>
+     <div class="card stat-card">
+      <div>
+       <div class="stat-label">
+        Customers
+       </div>
+       <div class="stat-value" id="statCustomers">
+        —
+       </div>
+       <div class="stat-meta">
+        Registered customers
+       </div>
+      </div>
+      <div class="stat-icon info">
+       👥
+      </div>
+     </div>
+     <div class="card stat-card">
+      <div>
+       <div class="stat-label">
+        Bookings
+       </div>
+       <div class="stat-value" id="statBookings">
+        —
+       </div>
+       <div class="stat-meta" id="metaBookings">
+        Rental activity
+       </div>
+      </div>
+      <div class="stat-icon warning">
+       📅
+      </div>
+     </div>
+     <div class="card stat-card">
+      <div>
+       <div class="stat-label">
+        Payments
+       </div>
+       <div class="stat-value" id="statPayments">
+        —
+       </div>
+       <div class="stat-meta" id="metaPayments">
+        Recorded revenue
+       </div>
+      </div>
+      <div class="stat-icon success">
+       💳
+      </div>
+     </div>
+    </section>
+    <section class="grid grid-2" style="margin-top:18px;align-items:start">
+     <div class="card">
+      <div class="card-head">
+       <div>
+        <h2>
+         Recent bookings
+        </h2>
+        <p>
+         Latest rental records in the system.
+        </p>
+       </div>
+       <a class="muted-link" href="/bookings.html">
+        View all →
+       </a>
+      </div>
+      <div class="table-wrap">
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Booking
+          </th>
+          <th>
+           Rental period
+          </th>
+          <th>
+           Status
+          </th>
+         </tr>
+        </thead>
+        <tbody id="recentBookings">
+        </tbody>
+       </table>
+       <div id="recentBookingsEmpty">
+       </div>
+      </div>
+     </div>
+     <div class="card">
+      <div class="card-head">
+       <div>
+        <h2>
+         Quick actions
+        </h2>
+        <p>
+         Jump into common management tasks.
+        </p>
+       </div>
+      </div>
+      <div class="card-pad quick-grid">
+       <a class="quick-action" href="/vehicles.html">
+        <span>
+         🚙
+        </span>
+        <strong>
+         Fleet
+        </strong>
+        <small>
+         Manage vehicles
+        </small>
+       </a>
+       <a class="quick-action" href="/customers.html">
+        <span>
+         👥
+        </span>
+        <strong>
+         Customers
+        </strong>
+        <small>
+         Customer records
+        </small>
+       </a>
+       <a class="quick-action" href="/payments.html">
+        <span>
+         💳
+        </span>
+        <strong>
+         Payments
+        </strong>
+        <small>
+         Payment records
+        </small>
+       </a>
+       <a class="quick-action" href="/maintenance.html">
+        <span>
+         🛠
+        </span>
+        <strong>
+         Maintenance
+        </strong>
+        <small>
+         Service history
+        </small>
+       </a>
+      </div>
+     </div>
+    </section>
+    <section class="card" style="margin-top:18px">
+     <div class="card-head">
+      <div>
+       <h2>
+        Fleet availability
+       </h2>
+       <p>
+        Current status of your vehicle inventory.
+       </p>
+      </div>
+      <a class="muted-link" href="/vehicles.html">
+       Manage fleet →
+      </a>
+     </div>
+     <div class="card-pad">
+      <div class="grid grid-3">
+       <div>
+        <div class="kpi-split">
+         <span class="stat-label">
+          Available
+         </span>
+         <strong id="availableCount">
+          —
+         </strong>
+        </div>
+        <div class="progress" style="margin-top:8px">
+         <span id="availableBar" style="width:0%">
+         </span>
+        </div>
+       </div>
+       <div>
+        <div class="kpi-split">
+         <span class="stat-label">
+          Rented / reserved
+         </span>
+         <strong id="activeFleetCount">
+          —
+         </strong>
+        </div>
+        <div class="progress" style="margin-top:8px">
+         <span id="activeFleetBar" style="width:0%;background:#d97706">
+         </span>
+        </div>
+       </div>
+       <div>
+        <div class="kpi-split">
+         <span class="stat-label">
+          Maintenance
+         </span>
+         <strong id="maintenanceCount">
+          —
+         </strong>
+        </div>
+        <div class="progress" style="margin-top:8px">
+         <span id="maintenanceBar" style="width:0%;background:#dc2626">
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+   </main>
+  </div>
+  <div class="toast-root" id="toastRoot">
+  </div>
+  <script defer="" src="js/common.js">
+  </script>
+  <script defer="" src="js/dashboard.js">
+  </script>
+ </body>
+</html>

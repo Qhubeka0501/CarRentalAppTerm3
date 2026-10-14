@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Maintenance | CareRent
+  </title>
+  <link href="css/app.css" rel="stylesheet"/>
+ </head>
+ <body class="app-page" data-page="maintenance" data-title="Maintenance">
+  <div class="loading-line" id="globalLoading">
+  </div>
+  <aside class="app-sidebar" id="appSidebar">
+  </aside>
+  <div class="app-overlay" id="appOverlay">
+  </div>
+  <div class="app-content">
+   <header class="app-topbar" id="appTopbar">
+   </header>
+   <main class="main">
+    <div class="page-head">
+     <div>
+      <h1>
+       Maintenance records
+      </h1>
+      <p>
+       Keep a clear service history for every vehicle.
+      </p>
+     </div>
+     <div class="page-actions">
+      <button class="btn btn-primary" id="addMaintenance">
+       + Add record
+      </button>
+     </div>
+    </div>
+    <div class="card">
+     <div class="toolbar">
+      <div class="toolbar-left">
+       <div class="search-wrap">
+        <span>
+         ⌕
+        </span>
+        <input id="maintenanceSearch" placeholder="Search vehicle, technician or service" type="search"/>
+       </div>
+      </div>
+      <div class="toolbar-right">
+       <span class="subtle" id="maintenanceCount">
+       </span>
+      </div>
+     </div>
+     <div class="table-wrap">
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Vehicle
+         </th>
+         <th>
+          Service date
+         </th>
+         <th>
+          Description
+         </th>
+         <th>
+          Technician
+         </th>
+         <th>
+          Cost
+         </th>
+         <th>
+         </th>
+        </tr>
+       </thead>
+       <tbody id="maintenanceRows">
+       </tbody>
+      </table>
+      <div id="maintenanceEmpty">
+      </div>
+     </div>
+    </div>
+   </main>
+  </div>
+  <div class="toast-root" id="toastRoot">
+  </div>
+  <script defer="" src="js/common.js">
+  </script>
+  <script defer="" src="js/maintenance.js">
+  </script>
+ </body>
+</html>

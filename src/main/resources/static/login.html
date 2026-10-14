@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in | CareRent</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="login-layout">
+    <section class="login-showcase">
+      <a class="brand" href="/"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 17h14l1-5-2.5-5h-11L4 12l1 5Z"/><path d="M3 12h18M7 17v2M17 17v2"/></svg></span><span>CareRent<small>Management System</small></span></a>
+      <div class="login-showcase-copy"><span class="hero-kicker" style="background:rgba(255,255,255,.1);color:#dbeafe">Secure staff access</span><h1>Everything your rental team needs, in one place.</h1><p>Sign in to manage the fleet, serve customers, process bookings and keep daily operations moving.</p><div class="login-benefits"><div class="login-benefit"><strong>Fast operations</strong><span>Clean workflows for everyday rental tasks.</span></div><div class="login-benefit"><strong>Connected records</strong><span>Built directly on your Spring Boot and MySQL layers.</span></div></div></div>
+      <div class="login-copyright">CareRent · Presentation Layer</div>
+    </section>
+    <main class="login-panel">
+      <div class="login-panel-inner">
+        <span class="eyebrow">Staff portal</span><h2>Welcome back</h2><p class="subtle">Enter your employee credentials to continue.</p>
+        <div id="loginMessage" class="note" style="display:none;margin-bottom:16px"></div>
+        <form id="loginForm" novalidate>
+          <div class="field"><label for="email">Email address</label><input type="email" id="email" name="email" autocomplete="username" placeholder="name@example.com" required></div>
+          <div class="field" style="margin-top:15px"><label for="password">Password</label><div class="password-wrap"><input type="password" id="password" name="password" autocomplete="current-password" placeholder="Enter your password" required><button class="password-toggle" id="togglePassword" type="button" aria-label="Show password">Show</button></div></div>
+          <button class="btn btn-primary btn-block" id="loginButton" type="submit" style="margin-top:20px">Sign in</button>
+        </form>
+        <div class="login-note">This portal is intended for authorised CareRent staff accounts.</div>
+      </div>
+    </main>
+  </div>
+  <script src="js/login.js"></script>
+</body>
+</html>

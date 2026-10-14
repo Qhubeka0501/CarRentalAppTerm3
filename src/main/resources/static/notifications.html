@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Notifications | CareRent
+  </title>
+  <link href="css/app.css" rel="stylesheet"/>
+ </head>
+ <body class="app-page" data-page="notifications" data-title="Notifications">
+  <div class="loading-line" id="globalLoading">
+  </div>
+  <aside class="app-sidebar" id="appSidebar">
+  </aside>
+  <div class="app-overlay" id="appOverlay">
+  </div>
+  <div class="app-content">
+   <header class="app-topbar" id="appTopbar">
+   </header>
+   <main class="main">
+    <div class="page-head">
+     <div>
+      <h1>
+       Notifications
+      </h1>
+      <p>
+       Maintain booking and customer communication records.
+      </p>
+     </div>
+     <div class="page-actions">
+      <button class="btn btn-primary" id="addNotification">
+       + New notification
+      </button>
+     </div>
+    </div>
+    <div class="card">
+     <div class="toolbar">
+      <div class="toolbar-left">
+       <div class="search-wrap">
+        <span>
+         ⌕
+        </span>
+        <input id="notificationSearch" placeholder="Search customer, booking or message" type="search"/>
+       </div>
+       <select id="notificationTypeFilter" style="width:auto;min-width:160px">
+        <option value="">
+         All channels
+        </option>
+        <option>
+         EMAIL
+        </option>
+        <option>
+         SMS
+        </option>
+        <option>
+         PUSH_NOTIFICATION
+        </option>
+       </select>
+      </div>
+      <div class="toolbar-right">
+       <span class="subtle" id="notificationCount">
+       </span>
+      </div>
+     </div>
+     <div class="table-wrap">
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Customer
+         </th>
+         <th>
+          Booking
+         </th>
+         <th>
+          Message
+         </th>
+         <th>
+          Channel
+         </th>
+         <th>
+          Sent
+         </th>
+         <th>
+         </th>
+        </tr>
+       </thead>
+       <tbody id="notificationRows">
+       </tbody>
+      </table>
+      <div id="notificationEmpty">
+      </div>
+     </div>
+    </div>
+   </main>
+  </div>
+  <div class="toast-root" id="toastRoot">
+  </div>
+  <script defer="" src="js/common.js">
+  </script>
+  <script defer="" src="js/notifications.js">
+  </script>
+ </body>
+</html>

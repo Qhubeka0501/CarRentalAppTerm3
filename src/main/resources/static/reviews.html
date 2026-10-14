@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Reviews | CareRent
+  </title>
+  <link href="css/app.css" rel="stylesheet"/>
+ </head>
+ <body class="app-page" data-page="reviews" data-title="Reviews">
+  <div class="loading-line" id="globalLoading">
+  </div>
+  <aside class="app-sidebar" id="appSidebar">
+  </aside>
+  <div class="app-overlay" id="appOverlay">
+  </div>
+  <div class="app-content">
+   <header class="app-topbar" id="appTopbar">
+   </header>
+   <main class="main">
+    <div class="page-head">
+     <div>
+      <h1>
+       Customer reviews
+      </h1>
+      <p>
+       Manage feedback and service ratings from customers.
+      </p>
+     </div>
+     <div class="page-actions">
+      <button class="btn btn-primary" id="addReview">
+       + Add review
+      </button>
+     </div>
+    </div>
+    <div class="grid grid-3" style="margin-bottom:18px">
+     <div class="card stat-card">
+      <div>
+       <div class="stat-label">
+        Reviews
+       </div>
+       <div class="stat-value" id="reviewTotal">
+        —
+       </div>
+      </div>
+      <div class="stat-icon">
+       ★
+      </div>
+     </div>
+     <div class="card stat-card">
+      <div>
+       <div class="stat-label">
+        Average rating
+       </div>
+       <div class="stat-value" id="reviewAverage">
+        —
+       </div>
+      </div>
+      <div class="stat-icon warning">
+       ★
+      </div>
+     </div>
+     <div class="card stat-card">
+      <div>
+       <div class="stat-label">
+        5-star reviews
+       </div>
+       <div class="stat-value" id="reviewFive">
+        —
+       </div>
+      </div>
+      <div class="stat-icon success">
+       ✓
+      </div>
+     </div>
+    </div>
+    <div class="card">
+     <div class="toolbar">
+      <div class="toolbar-left">
+       <div class="search-wrap">
+        <span>
+         ⌕
+        </span>
+        <input id="reviewSearch" placeholder="Search customer or comments" type="search"/>
+       </div>
+       <select id="reviewRatingFilter" style="width:auto;min-width:140px">
+        <option value="">
+         All ratings
+        </option>
+        <option value="5">
+         5 stars
+        </option>
+        <option value="4">
+         4 stars
+        </option>
+        <option value="3">
+         3 stars
+        </option>
+        <option value="2">
+         2 stars
+        </option>
+        <option value="1">
+         1 star
+        </option>
+       </select>
+      </div>
+      <div class="toolbar-right">
+       <span class="subtle" id="reviewCount">
+       </span>
+      </div>
+     </div>
+     <div class="table-wrap">
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Customer
+         </th>
+         <th>
+          Rating
+         </th>
+         <th>
+          Comments
+         </th>
+         <th>
+          Review ID
+         </th>
+         <th>
+         </th>
+        </tr>
+       </thead>
+       <tbody id="reviewRows">
+       </tbody>
+      </table>
+      <div id="reviewEmpty">
+      </div>
+     </div>
+    </div>
+   </main>
+  </div>
+  <div class="toast-root" id="toastRoot">
+  </div>
+  <script defer="" src="js/common.js">
+  </script>
+  <script defer="" src="js/reviews.js">
+  </script>
+ </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Payments | CareRent
+  </title>
+  <link href="css/app.css" rel="stylesheet"/>
+ </head>
+ <body class="app-page" data-page="payments" data-title="Payments">
+  <div class="loading-line" id="globalLoading">
+  </div>
+  <aside class="app-sidebar" id="appSidebar">
+  </aside>
+  <div class="app-overlay" id="appOverlay">
+  </div>
+  <div class="app-content">
+   <header class="app-topbar" id="appTopbar">
+   </header>
+   <main class="main">
+    <div class="page-head">
+     <div>
+      <h1>
+       Payment management
+      </h1>
+      <p>
+       Record and review payments linked to bookings.
+      </p>
+     </div>
+     <div class="page-actions">
+      <button class="btn btn-primary" id="addPayment">
+       + Record payment
+      </button>
+     </div>
+    </div>
+    <div class="grid grid-3" style="margin-bottom:18px">
+     <div class="card stat-card">
+      <div>
+       <div class="stat-label">
+        Total records
+       </div>
+       <div class="stat-value" id="paymentTotal">
+        —
+       </div>
+      </div>
+      <div class="stat-icon">
+       💳
+      </div>
+     </div>
+     <div class="card stat-card">
+      <div>
+       <div class="stat-label">
+        Paid amount
+       </div>
+       <div class="stat-value" id="paymentPaid">
+        —
+       </div>
+      </div>
+      <div class="stat-icon success">
+       R
+      </div>
+     </div>
+     <div class="card stat-card">
+      <div>
+       <div class="stat-label">
+        Pending
+       </div>
+       <div class="stat-value" id="paymentPending">
+        —
+       </div>
+      </div>
+      <div class="stat-icon warning">
+       …
+      </div>
+     </div>
+    </div>
+    <div class="card">
+     <div class="toolbar">
+      <div class="toolbar-left">
+       <div class="search-wrap">
+        <span>
+         ⌕
+        </span>
+        <input id="paymentSearch" placeholder="Search payment or booking" type="search"/>
+       </div>
+       <select id="paymentStatusFilter" style="width:auto;min-width:150px">
+        <option value="">
+         All statuses
+        </option>
+        <option>
+         PENDING
+        </option>
+        <option>
+         PAID
+        </option>
+        <option>
+         COMPLETED
+        </option>
+        <option>
+         FAILED
+        </option>
+        <option>
+         CANCELLED
+        </option>
+       </select>
+      </div>
+      <div class="toolbar-right">
+       <span class="subtle" id="paymentCount">
+       </span>
+      </div>
+     </div>
+     <div class="table-wrap">
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Payment
+         </th>
+         <th>
+          Booking
+         </th>
+         <th>
+          Amount
+         </th>
+         <th>
+          Date
+         </th>
+         <th>
+          Method
+         </th>
+         <th>
+          Status
+         </th>
+         <th>
+         </th>
+        </tr>
+       </thead>
+       <tbody id="paymentRows">
+       </tbody>
+      </table>
+      <div id="paymentEmpty">
+      </div>
+     </div>
+    </div>
+   </main>
+  </div>
+  <div class="toast-root" id="toastRoot">
+  </div>
+  <script defer="" src="js/common.js">
+  </script>
+  <script defer="" src="js/payments.js">
+  </script>
+ </body>
+</html>

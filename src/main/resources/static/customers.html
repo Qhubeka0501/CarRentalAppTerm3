@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Customers | CareRent
+  </title>
+  <link href="css/app.css" rel="stylesheet"/>
+ </head>
+ <body class="app-page" data-page="customers" data-title="Customers">
+  <div class="loading-line" id="globalLoading">
+  </div>
+  <aside class="app-sidebar" id="appSidebar">
+  </aside>
+  <div class="app-overlay" id="appOverlay">
+  </div>
+  <div class="app-content">
+   <header class="app-topbar" id="appTopbar">
+   </header>
+   <main class="main">
+    <div class="page-head">
+     <div>
+      <h1>
+       Customer management
+      </h1>
+      <p>
+       Maintain customer, licence, address and emergency-contact information.
+      </p>
+     </div>
+     <div class="page-actions">
+      <button class="btn btn-primary" id="addCustomer">
+       + Add customer
+      </button>
+     </div>
+    </div>
+    <div class="card">
+     <div class="toolbar">
+      <div class="toolbar-left">
+       <div class="search-wrap">
+        <span>
+         ⌕
+        </span>
+        <input id="customerSearch" placeholder="Search name, email or licence" type="search"/>
+       </div>
+      </div>
+      <div class="toolbar-right">
+       <span class="subtle" id="customerCount">
+        0 customers
+       </span>
+      </div>
+     </div>
+     <div class="table-wrap">
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Customer
+         </th>
+         <th>
+          Contact
+         </th>
+         <th>
+          Driver licence
+         </th>
+         <th>
+          Date of birth
+         </th>
+         <th>
+          Location
+         </th>
+         <th>
+         </th>
+        </tr>
+       </thead>
+       <tbody id="customerRows">
+       </tbody>
+      </table>
+      <div id="customerEmpty">
+      </div>
+     </div>
+    </div>
+   </main>
+  </div>
+  <div class="toast-root" id="toastRoot">
+  </div>
+  <script defer="" src="js/common.js">
+  </script>
+  <script defer="" src="js/customers.js">
+  </script>
+ </body>
+</html>

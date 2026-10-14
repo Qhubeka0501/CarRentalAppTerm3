@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Staff &amp; Roles | CareRent
+  </title>
+  <link href="css/app.css" rel="stylesheet"/>
+ </head>
+ <body class="app-page" data-page="staff" data-title="Staff &amp; Roles">
+  <div class="loading-line" id="globalLoading">
+  </div>
+  <aside class="app-sidebar" id="appSidebar">
+  </aside>
+  <div class="app-overlay" id="appOverlay">
+  </div>
+  <div class="app-content">
+   <header class="app-topbar" id="appTopbar">
+   </header>
+   <main class="main">
+    <div class="page-head">
+     <div>
+      <h1>
+       Staff &amp; roles
+      </h1>
+      <p>
+       Manage employees, managers and access-role records.
+      </p>
+     </div>
+    </div>
+    <div class="tabs" style="margin-bottom:18px">
+     <button class="tab-btn active" data-tab="employees">
+      Employees
+     </button>
+     <button class="tab-btn" data-tab="managers">
+      Managers
+     </button>
+     <button class="tab-btn" data-tab="roles">
+      Roles
+     </button>
+    </div>
+    <section class="tab-panel active" id="tab-employees">
+     <div class="card">
+      <div class="toolbar">
+       <div class="toolbar-left">
+        <div class="search-wrap">
+         <span>
+          ⌕
+         </span>
+         <input id="employeeSearch" placeholder="Search employee" type="search"/>
+        </div>
+       </div>
+       <div class="toolbar-right">
+        <button class="btn btn-primary btn-sm" id="addEmployee">
+         + Add employee
+        </button>
+       </div>
+      </div>
+      <div class="table-wrap">
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Employee
+          </th>
+          <th>
+           Contact
+          </th>
+          <th>
+           Salary
+          </th>
+          <th>
+           Role
+          </th>
+          <th>
+          </th>
+         </tr>
+        </thead>
+        <tbody id="employeeRows">
+        </tbody>
+       </table>
+       <div id="employeeEmpty">
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="tab-panel" id="tab-managers">
+     <div class="card">
+      <div class="toolbar">
+       <div class="toolbar-left">
+        <div class="search-wrap">
+         <span>
+          ⌕
+         </span>
+         <input id="managerSearch" placeholder="Search manager" type="search"/>
+        </div>
+       </div>
+       <div class="toolbar-right">
+        <button class="btn btn-primary btn-sm" id="addManager">
+         + Add manager
+        </button>
+       </div>
+      </div>
+      <div class="table-wrap">
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Manager
+          </th>
+          <th>
+           Contact
+          </th>
+          <th>
+           Manager code
+          </th>
+          <th>
+           Salary
+          </th>
+          <th>
+           Role
+          </th>
+          <th>
+          </th>
+         </tr>
+        </thead>
+        <tbody id="managerRows">
+        </tbody>
+       </table>
+       <div id="managerEmpty">
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="tab-panel" id="tab-roles">
+     <div class="grid grid-2" style="align-items:start">
+      <div class="card">
+       <div class="card-head">
+        <div>
+         <h2>
+          Roles
+         </h2>
+         <p>
+          Role records used by the user domain.
+         </p>
+        </div>
+        <button class="btn btn-primary btn-sm" id="addRole">
+         + Add role
+        </button>
+       </div>
+       <div class="table-wrap">
+        <table style="min-width:0">
+         <thead>
+          <tr>
+           <th>
+            Role name
+           </th>
+           <th>
+            Role ID
+           </th>
+           <th>
+           </th>
+          </tr>
+         </thead>
+         <tbody id="roleRows">
+         </tbody>
+        </table>
+        <div id="roleEmpty">
+        </div>
+       </div>
+      </div>
+      <div class="card card-pad">
+       <h3 style="margin-top:0">
+        About roles
+       </h3>
+       <p class="subtle" style="font-size:13px">
+        Roles are linked to users through your existing domain model. Create a role here before assigning it to a new employee or manager.
+       </p>
+       <div class="note" style="margin-top:14px">
+        Deleting a role that is already assigned to users may be blocked by the database relationship.
+       </div>
+      </div>
+     </div>
+    </section>
+   </main>
+  </div>
+  <div class="toast-root" id="toastRoot">
+  </div>
+  <script defer="" src="js/common.js">
+  </script>
+  <script defer="" src="js/staff.js">
+  </script>
+ </body>
+</html>
